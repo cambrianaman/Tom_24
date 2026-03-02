@@ -37,12 +37,25 @@ function Calculator() {
       rl.question("Enter choice: ", (choice) => {
         const op = parseInt(choice);
 
+        if (isNaN(op)) {
+          console.error("Invalid choice.");
+          rl.close();
+          return;
+        }
+
         let result;
         switch (op) {
           case 1: result = numa + numb; break;
           case 2: result = numa - numb; break;
           case 3: result = numa * numb; break;
-          case 4: result = numa / numb; break;
+          case 4: 
+            if (numb === 0) {
+              console.log("Cannot divide by zero.");
+              rl.close();
+              return;
+            }
+            result = numa / numb; 
+            break;
           case 5: result = numa % numb; break;
           default: result = "Invalid choice";
         }
@@ -54,5 +67,4 @@ function Calculator() {
   });
 }
 
-Calculator();
-
+Calculator();   // ✅ Correct function call
