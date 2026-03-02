@@ -21,7 +21,7 @@ function Calculator(numa,numb)
     console.log("Press 3 for multiplication");
     console.log("Press 4 for division");
     console.log("Press 5 for modulous");
-    var op;
+    var op=3;
 
     switch (op)
 {
@@ -42,14 +42,30 @@ function Calculator(numa,numb)
 //console.log("Modulous of two numbers = "+g);
 }
 }
-rl.question("Enter first number: ", (firstInput)) => {
+/*
+rl.question("Enter first number: ", (firstInput) => {
     const numa = parseFloat(firstInput);
-}
-rl.question("Enter second number: ", (SecondInput)) => {
-    const numb = parseFloat(SecondInput);
-}
+    if (isNaN(numa)) {
+        console.error("Invalid number.");
+        rl.close();
+        return;
+    }
+
+ rl.question("Enter second number: ", (secondInput) => {
+            const numb = parseFloat(secondInput);
+            if (isNaN(numb)) {
+                console.error("Invalid number.");
+                rl.close();
+                return;
+            }
+        
        
-        rl.question("Enter choice ", (ThirdInput)) => {
-            const op = parseFloat(thirdInput);
-        }
-Calculator(numa,numb);
+         rl.question("Enter choice: ", (choicet) => {
+            const op = parseFloat(secondInput);
+            if (isNaN(num2)) {
+                console.error("Invalid number.");
+                rl.close();
+                return;
+            }
+        */
+Calculator(500,10);
