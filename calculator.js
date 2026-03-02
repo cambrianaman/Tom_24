@@ -6,7 +6,7 @@ const readline = require('readline');
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
-})
+});
 
 function h()
 {
@@ -23,7 +23,7 @@ function Calculator(numa,numb)
     console.log("Press 5 for modulous");
     var op;
 
-    switch (op);
+    switch (op)
 {
         case 1: return numa + numb;
         case 2: return numa - numb;
