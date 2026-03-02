@@ -1,6 +1,6 @@
 // dynamic  Input
 // Import the readline module
-
+/*
 const readline = require('readline'); 
 
 // Create an interface for input/output
@@ -74,4 +74,65 @@ rl.question("Enter first number: ", (firstInput) => {
 console.log("Result"+result);
 });
 });
+});
+*/
+const readline = require('readline'); 
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+function h() {
+  console.log(" *****************  Calculator *************");
+}
+h();
+
+function Calculator(numa, numb, op) {
+  switch (op) {
+    case 1: return numa + numb;
+    case 2: return numa - numb;
+    case 3: return numa * numb;
+    case 4: return numa / numb;
+    case 5: return numa % numb;
+    default: return "Invalid choice";
+  }
+}
+
+rl.question("Enter first number: ", (firstInput) => {
+  const numa = parseFloat(firstInput);
+  if (isNaN(numa)) {
+    console.error("Invalid number.");
+    rl.close();
+    return;
+  }
+
+  rl.question("Enter second number: ", (secondInput) => {
+    const numb = parseFloat(secondInput);
+    if (isNaN(numb)) {
+      console.error("Invalid number.");
+      rl.close();
+      return;
+    }
+
+    console.log("Press 1 for addition");
+    console.log("Press 2 for subtraction");
+    console.log("Press 3 for multiplication");
+    console.log("Press 4 for division");
+    console.log("Press 5 for modulus");
+
+    rl.question("Enter choice: ", (choice) => {
+      const op = parseInt(choice);
+      if (isNaN(op)) {
+        console.error("Invalid choice.");
+        rl.close();
+        return;
+      }
+
+      const result = Calculator(numa, numb, op);
+      console.log("Result = " + result);
+
+      rl.close();
+    });
+  });
 });
