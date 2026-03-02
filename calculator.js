@@ -42,14 +42,14 @@ function Calculator(numa,numb)
 //console.log("Modulous of two numbers = "+g);
 }
 }
-rl.question("Enter first number: ", (firstInput) => {
+rl.question("Enter first number: ", (firstInput)) => {
     const numa = parseFloat(firstInput);
 }
-rl.question("Enter second number: ", (SecondInput) => {
+rl.question("Enter second number: ", (SecondInput)) => {
     const numb = parseFloat(SecondInput);
 }
-rl.question("Enter choice (+, -, *, /, %): ", (op) => {
-        
-        rl.question("Enter choice ", (ThirdInput) => {
+       
+        rl.question("Enter choice ", (ThirdInput)) => {
             const op = parseFloat(thirdInput);
+        }
 Calculator(numa,numb);
