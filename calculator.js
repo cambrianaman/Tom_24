@@ -69,3 +69,5 @@ rl.question("Enter first number: ", (firstInput) => {
             }
         */
 Calculator(500,10);
+ const result = calculate(numa, numb);
+console.log('✅ Result: ${numa} ${op} ${numb} = ${result');
