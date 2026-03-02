@@ -1,3 +1,4 @@
+// static Input 
 function h()
 {
     console.log(" *****************  Calculator *************");
