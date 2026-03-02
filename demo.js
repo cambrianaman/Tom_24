@@ -23,7 +23,7 @@ function Calculator(numa,numb)
     console.log("Press 4 for division");
     console.log("Press 5 for modulous");
     rl.question("Enter first number: ", (firstInput) => {
-    var numa = parseFloat(firstInput);
+    const numa = parseFloat(firstInput);
     if (isNaN(numa)) {
         console.error("Invalid number.");
         rl.close();
@@ -31,7 +31,7 @@ function Calculator(numa,numb)
     }
 
  rl.question("Enter second number: ", (secondInput) => {
-            var numb = parseFloat(secondInput);
+            const numb = parseFloat(secondInput);
             if (isNaN(numb)) {
                 console.error("Invalid number.");
                 rl.close();
@@ -40,7 +40,7 @@ function Calculator(numa,numb)
         
        
          rl.question("Enter choice: ", (choice) => {
-            var op = parseFloat(choice);
+            const op = parseFloat(choice);
             if (isNaN(choice)) {
                 console.error("Invalid number.");
                 rl.close();
