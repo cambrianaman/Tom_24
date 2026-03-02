@@ -41,25 +41,32 @@ function Calculator(numa,numb)
        
          rl.question("Enter choice: ", (choice) => {
             var op = parseFloat(choice);
-            if (isNaN(numb)) {
+            if (isNaN(choice)) {
                 console.error("Invalid number.");
                 rl.close();
                 return;
             }
-    
+    });
+});
+});
 
     switch (op)
 {
         case 1: 
         console.log(numa+numb);
+        break;
         case 2: 
          console.log(numa+numb);
+         break;
         case 3: 
          console.log(numa+numb);
+         break;
         case 4: 
          console.log(numa+numb);
+         break;
         case 5: 
          console.log(numa+numb);
+         break;
 //var c=a+b;
 //var d=a-b;
 //var e=a*b;
@@ -75,7 +82,5 @@ function Calculator(numa,numb)
 
 
 
-});
-});
-});
+
 Calculator(numa, numb);
