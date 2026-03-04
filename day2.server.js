@@ -8,7 +8,7 @@ let requestCount = 0;
 // Middleware to count all incoming requests
 app.use((req, res, next) => {
   requestCount++;
-  console.log(Total requests so far: ${requestCount});
+  console.log('Total requests so far: ${requestCount}');
   next(); // Pass control to the next handler
 });
 
@@ -27,5 +27,5 @@ app.get('/', (req, res) => {
 
 // Start the server
 app.listen(PORT, () => {
-  console.log(Server is running on http://localhost:${PORT});
+  console.log('Server is running on http://localhost:${PORT}');
 });
