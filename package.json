@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "sqlite3": "^5.1.7"
   },
   "name": "tom_24",
   "version": "1.0.0",
