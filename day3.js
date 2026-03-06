@@ -1,4 +1,4 @@
-const require=('express');
+const express = require('express');
 const sqlite3=require('sqlite3').verbose();
 const app= express();
 const PORT=5000;
@@ -89,4 +89,6 @@ app.post("/api/cars",(req,res)=>{
         });
     });
     });
-    
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+});
